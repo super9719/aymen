@@ -28,10 +28,11 @@ app.post('/myportfolio/contact', (req,res) => {
     }
     transporter.sendMail(mailoptions, (err, info)=> {
         if(err){
+            res.send(err)
             console.log(err)
         }else{
             console.log(info);
-            res.status(200).end();
+            res.send(info).status(200).end();  
         };
     });
     
