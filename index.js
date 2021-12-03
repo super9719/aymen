@@ -1,6 +1,6 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer')
+const express = require('./node_modules/express');
+const bodyParser = require('./node_modules/body-parser');
+const nodemailer = require('./node_modules/nodemailer')
 const app = express();
 
 app.use(express.static('assets'));
