@@ -32,7 +32,7 @@ app.post('/myportfolio/contact', (req,res) => {
             console.log(err)
         }else{
             console.log(info);
-            res.send(info).status(200).end();  
+            res.status(200).send(info);  
         };
     });
     

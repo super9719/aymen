@@ -112,7 +112,7 @@ document.querySelector('#contact .left .form button').addEventListener(
                     }
                 ).then(res => {
                     if(res.status == 200){
-			console.log(res)
+			console.log(res.data)
                         if(!successAlert.classList.contains('active')){
                             successAlert.classList.add('active')
                         };
