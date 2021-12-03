@@ -24,7 +24,12 @@ app.post('/myportfolio/contact', (req,res) => {
         from: 'myportfolio2aymen@gmail.com',
         to: 'dafriaymene@gmail.com',
         subject: req.body.title,
-        text: 'Mr/Ms' + req.body.name + '/n' + req.body.email + '/n' + req.body.message
+        text: `Mr/Ms ${req.body.name}
+
+            ${req.body.email}
+            
+            ${req.body.message}
+        `
     }
     transporter.sendMail(mailoptions, (err, info)=> {
         if(err){

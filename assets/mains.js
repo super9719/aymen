@@ -69,6 +69,7 @@ document.querySelectorAll('#services .left >div').forEach(div => {
         customalert.classList.add('active');
         customalert.lastElementChild.lastElementChild.onclick = function(){
             document.querySelector('#home .navbar .sections .contact a').click();
+	    customalert.classList.remove('active');	
         };
     };
 });
