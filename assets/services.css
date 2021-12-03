@@ -2,6 +2,7 @@
     width: 100%;
     height: 20%;
     background-color: #fdfdfd;
+    position: relative;
 }
 #services .content{
     display: flex;
@@ -95,4 +96,40 @@ width: 370px;
 #services .content .right >div:last-of-type span:last-of-type{
     width: 50px;
     padding: 20px 0 0 5px;
+}
+
+.customalert{
+    display: none;
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 200px);
+    width: 450px;
+    height: 160px;
+    background-color: #fff;
+    padding: 20px 0 0 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px #000;
+}
+.customalert.active{
+    display: block;
+}
+.customalert div:first-of-type{
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+.customalert div:nth-of-type(2){
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+.customalert div:last-of-type button{
+    display: inline-block;
+    border: none;
+    font-weight: bold;
+    width: 50px;
+    height: 30px;
+    background-image: linear-gradient(30deg, #7f3f9e, #319ed9);
+    margin-right: 5px;
+    cursor: pointer;
 }

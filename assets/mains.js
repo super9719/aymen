@@ -1,4 +1,4 @@
-﻿
+
 document.body.style.height = window.innerHeight * 5;
 
 // change the color of scroll thumb to feet with the track color
@@ -61,6 +61,20 @@ document.querySelectorAll('#about .right .after div div').forEach(div => {
     };
 });
 
+
+//redirect the user to contact section if he click on some of our services
+document.querySelectorAll('#services .left >div').forEach(div => {
+    div.onclick = function(e){
+        let customalert = document.querySelector('#services .customalert');
+        customalert.classList.add('active');
+        customalert.lastElementChild.lastElementChild.onclick = function(){
+            document.querySelector('#home .navbar .sections .contact a').click();
+        };
+    };
+});
+
+
+
 /**********************************contact section  ****************/
 // send the message to the user
 document.querySelector('#contact .left .form button').addEventListener(
@@ -104,7 +118,7 @@ document.querySelector('#contact .left .form button').addEventListener(
                 formData.message = form[3].value;
                 console.log(formData)
                 fetch( 
-                    '/myportfolio/contact',
+                    window.location.pathname +'/'+ window.location.hash.split('#')[1],
                     {   
                         method: 'POST',
                         headers:{'Content-Type': 'application/json'},
@@ -112,7 +126,7 @@ document.querySelector('#contact .left .form button').addEventListener(
                     }
                 ).then(res => {
                     if(res.status == 200){
-			console.log(res.data)
+                        console.log(res.data)
                         if(!successAlert.classList.contains('active')){
                             successAlert.classList.add('active')
                         };
