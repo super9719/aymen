@@ -16,12 +16,12 @@ app.post('/myportfolio/contact', (req,res) => {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: 'myportfolio2aymene@gmail.com',
+          user: 'myportfolio2aymen@gmail.com',
           pass: 'super20191397'
         }
     });
     let mailoptions = {
-        from: 'myportfolio2aymene@gmail.com',
+        from: 'myportfolio2aymen@gmail.com',
         to: 'dafriaymene@gmail.com',
         subject: req.body.title,
         text: 'Mr/Ms' + req.body.name + '/n' + req.body.email + '/n' + req.body.message
