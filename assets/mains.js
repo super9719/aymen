@@ -1,4 +1,4 @@
-
+﻿
 document.body.style.height = window.innerHeight * 5;
 
 // change the color of scroll thumb to feet with the track color
@@ -104,7 +104,7 @@ document.querySelector('#contact .left .form button').addEventListener(
                 formData.message = form[3].value;
                 console.log(formData)
                 fetch( 
-                    window.location.pathname +'/'+ window.location.hash.split('#')[1],
+                    '/myportfolio/contact',
                     {   
                         method: 'POST',
                         headers:{'Content-Type': 'application/json'},
