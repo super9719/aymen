@@ -148,7 +148,7 @@ width: 370px;
     }
     #services .content .right{
         padding-left: 5px;
-        padding-top: 5px;
+        padding-top: 8%;
         width: 100%;
         height: 50%;
     }
@@ -186,9 +186,9 @@ width: 370px;
     #services .content .left >div{
         width: 100%;
         height: 28%;
-        padding-top: 3.5%;
         margin-bottom: 4%;
         padding-left: 15px;
+        align-items: center;
     }
     #services .content .left >div:active{
         background-image: linear-gradient(45deg, #7f3f9e, #319ed9);
@@ -203,6 +203,7 @@ width: 370px;
     }
     #services .content .left >div div:last-of-type{
         font-size: 1.1em;
+        padding-top: 10px;
     }
     #services .customalert{
         background-image: linear-gradient(30deg, #7f3f9e, #319ed9);
