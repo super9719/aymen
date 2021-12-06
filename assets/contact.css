@@ -208,11 +208,12 @@
     #contact div.left{
         width: 100%;
         height: 100%;
-        padding: 15% 15px;
+        padding: 15% 15px 0;
     }
     #contact div.left .title{
         width: 93%;
         font-size: 2.2em;
+        height: 20%;
     }
     #contact div.left .myinfo{
         left: 100%;
@@ -222,6 +223,10 @@
     }
     #contact div.left .myinfo.active{
         left: calc(100% - 300px);
+    }
+    #contact div.left .form{
+        height: 80%;
+        padding-top: 15%;
     }
     #contact div.left .form div{
         width: 95%;

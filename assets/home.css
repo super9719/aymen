@@ -225,10 +225,8 @@ body.scrolled::-webkit-scrollbar-thumb{
     }
     #home .phonenavbar .dropmenu.scrolled{
         position: fixed;
-        width: 40px;
-        height: 40px;
-        top: 5px;
-        left: calc(100% - 45px);
+        top: 10px;
+        left: calc(100% - 60px);
     }
     #home .phonenavbar .dropmenu >div{
         width: 100%;
@@ -249,7 +247,7 @@ body.scrolled::-webkit-scrollbar-thumb{
         box-shadow: 0 0 4px #111;
     }
     #home .phonenavbar .dropmenu.scrolled.active >div div:first-of-type{
-        transform: translateY(12px) rotate(45deg);
+        transform: translateY(17px) rotate(45deg);
         box-shadow: 0 0 4px #111;
     }
     #home .phonenavbar .dropmenu >div div:nth-of-type(2){
@@ -267,7 +265,7 @@ body.scrolled::-webkit-scrollbar-thumb{
         box-shadow: 0 0 4px #111; 
     }
     #home .phonenavbar .dropmenu.scrolled.active >div div:last-of-type{
-        transform: translateY(-12px) rotate(-45deg);
+        transform: translateY(-17px) rotate(-45deg);
     }
     .phonemenu{
         display: block;

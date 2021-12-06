@@ -1,5 +1,10 @@
-
+// set the body height
 document.body.style.height = window.innerHeight * 5;
+
+//reset the body height on resize event
+window.onresize = function(e){
+    document.body.style.height = window.innerHeight * 5;
+}
 
 // change the color of scroll thumb to feet with the track color
 window.addEventListener('scroll', e => {
@@ -13,6 +18,8 @@ window.addEventListener('scroll', e => {
         };
     };
 });
+
+
 
 // change the display type of the navbar on scroll
 window.addEventListener('scroll', e => {
