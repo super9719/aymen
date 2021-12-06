@@ -113,9 +113,10 @@
     }
     #works .content .title{
         font-size: 2.2em;
+        padding-top: 20%;
     }
     #works .content .gallery{
-        padding-top: 60px;
+        padding-top: 22%;
     }
     #works .content .gallery >div{
         width: 85%;

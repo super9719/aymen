@@ -147,26 +147,28 @@ width: 370px;
         height: 50%;
     }
     #services .content .right{
+        padding-left: 5px;
         padding-top: 5px;
         width: 100%;
         height: 50%;
     }
     #services .content .right div:first-of-type{
-        height: 60px;
+        height: 20%;
         font-size: 2.3em;
     }
     #services .content .right div:nth-of-type(2){
         line-height: 1.6;
-        width: 100%;
+        width: 92%;
         padding-right: 5px;
         font-size: 15px;
+        height: 55%;
     }
     #services .content .right div:nth-of-type(2) br:first-of-type{
         display: none;
     }
     #services .content .right div:last-of-type{
         margin-top: 10px;
-        height: 50px;
+        height: 25%;
     }
     #services .content .right div:last-of-type span:first-of-type{
         width: 42px;
@@ -183,9 +185,9 @@ width: 370px;
     }
     #services .content .left >div{
         width: 100%;
-        height: 75px;
-        padding-top: 9px;
-        margin-bottom: 15px;
+        height: 28%;
+        padding-top: 3.5%;
+        margin-bottom: 4%;
         padding-left: 15px;
     }
     #services .content .left >div:active{
