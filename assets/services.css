@@ -176,15 +176,15 @@ width: 370px;
     }
     #services .content .right div:last-of-type span:last-of-type{
         font-size: 14px;
-        padding: 4px 0 0 5px
+        padding: 7px 0 0 5px
     }
     #services .content .left{
         padding: 0;
     }
     #services .content .left >div{
-        width: 100%;
+        width: 95%;
         height: 28%;
-        margin-bottom: 4%;
+        margin-bottom: 0 auto 4%;
         padding-left: 15px;
         align-items: center;
         padding-top: 0;
