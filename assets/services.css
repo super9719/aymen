@@ -151,6 +151,9 @@ width: 370px;
         padding-top: 8%;
         width: 100%;
         height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
     #services .content .right div:first-of-type{
         height: 20%;
@@ -167,8 +170,7 @@ width: 370px;
         display: none;
     }
     #services .content .right div:last-of-type{
-        margin-top: 10px;
-        height: 25%;
+        margin-top: 20px;
     }
     #services .content .right div:last-of-type span:first-of-type{
         width: 42px;
@@ -189,6 +191,7 @@ width: 370px;
         margin-bottom: 4%;
         padding-left: 15px;
         align-items: center;
+        padding-top: 0;
     }
     #services .content .left >div:active{
         background-image: linear-gradient(45deg, #7f3f9e, #319ed9);
