@@ -1,4 +1,4 @@
-// set the body height
+﻿// set the body height
 document.body.style.height = window.innerHeight * 5;
 
 // change the color of scroll thumb to feet with the track color
@@ -177,7 +177,7 @@ document.querySelector('#contact .left .myinfo .logo').onclick = function(e){
 //scroll the dropmenu button
 window.onscroll = function(e){
     let dropmenu = document.querySelector('#home .phonenavbar .dropmenu');
-    if(window.scrollY >= window.innerHeight){
+    if(window.scrollY >= window.innerHeight - 20){
         if(!dropmenu.classList.contains('scrolled')){
             dropmenu.classList.add('scrolled');
         }
