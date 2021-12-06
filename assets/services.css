@@ -151,12 +151,9 @@ width: 370px;
         padding-top: 8%;
         width: 100%;
         height: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
     }
     #services .content .right div:first-of-type{
-        height: 20%;
+        height: 25%;
         font-size: 2.3em;
     }
     #services .content .right div:nth-of-type(2){
@@ -164,7 +161,6 @@ width: 370px;
         width: 92%;
         padding-right: 5px;
         font-size: 15px;
-        height: 55%;
     }
     #services .content .right div:nth-of-type(2) br:first-of-type{
         display: none;
@@ -173,9 +169,9 @@ width: 370px;
         margin-top: 20px;
     }
     #services .content .right div:last-of-type span:first-of-type{
-        width: 42px;
-        height: 42px;
-        line-height: 42px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
         font-size: 1.1em;
     }
     #services .content .right div:last-of-type span:last-of-type{
