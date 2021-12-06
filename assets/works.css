@@ -68,8 +68,6 @@
     border-radius: 10px;
 }
 
-
-
 /************************ animation ********************************/
 @keyframes products {
     0%{
@@ -84,6 +82,46 @@
         margin-left: -33%;
     }100%{
         margin-left: -33%;
+    }
+}
+
+/******************************media query**************************/
+
+/*animation to be used in phone size*/
+@keyframes productsPhone{
+    0%{
+        margin-left: 0;
+    }15%{
+        margin-left: 0;
+    }30%{
+        margin-left: -90%;
+    }45%{
+        margin-left: -90%;
+    }60%{
+        margin-left: -180%;
+    }75%{
+        margin-left: -180%;
+    }90%{
+        margin-left: -270%;
+    }100%{
+        margin-left: -270%;
+    }
+}
+@media screen and (max-width: 600px) {
+    #works .container{
+        padding: 0 10px;
+    }
+    #works .content .title{
+        font-size: 2.2em;
+    }
+    #works .content .gallery{
+        padding-top: 60px;
+    }
+    #works .content .gallery >div{
+        width: 85%;
+    }
+    #works .content .gallery >div:first-of-type{
+        animation: productsPhone 10s linear 2s infinite alternate;
     }
 }
 

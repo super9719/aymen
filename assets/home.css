@@ -10,6 +10,9 @@ body{
     margin: 0;
     font-family: Verdana, Tahoma, sans-serif;
 }
+body >div:not(.phonemenu){
+    overflow: hidden;
+}
 body::-webkit-scrollbar{
     width: 10px;
     background-color: #f8f7f1;
@@ -26,12 +29,18 @@ body.scrolled::-webkit-scrollbar-thumb{
     border: solid 3px #7f3f9e;
 
 }
+.phonemenu{
+    display: none;
+}
 #home{
     width: 100%;
     height: 20%;
     background-color: var(--home-bgColor);
     color: #0f182c;
     overflow: hidden;
+}
+#home .phonenavbar{
+    display: none;
 }
 #home .navbar{
     width: 100%;
@@ -182,6 +191,169 @@ body.scrolled::-webkit-scrollbar-thumb{
     opacity: 0.95;
 }
 
+/**************************media query ******************************************/
+@media screen and (max-width: 600px) {
+    #home .container{
+        padding: 0 10px;
+    }
+    #home .navbar{
+        display: none;
+    }
+    #home .phonenavbar{
+        display: block;
+        width: 100%;
+        height: 60px;
+        position: relative;
+    }
+    #home .phonenavbar .title{
+        width: 100%;
+        height: 100%;
+        font-family: 'Comforter Brush', cursive;
+        font-size: 2em;
+        padding-top: 10px;
+    }
+    #home .phonenavbar .dropmenu{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-image: linear-gradient(45deg, #7f3f9e, #319ed9);
+        top: 10px;
+        left: calc(100% - 55px);
+        box-shadow: 0 0 4px #111;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    #home .phonenavbar .dropmenu.scrolled{
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        top: 5px;
+        left: calc(100% - 45px);
+    }
+    #home .phonenavbar .dropmenu >div{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    #home .phonenavbar .dropmenu >div div{
+        width: 85%;
+        height: 4px;
+        background-color: #fff;
+        position: absolute;
+        top: 6px;
+        left: 7.5%;
+        transition: all .5s linear;
+    }
+    #home .phonenavbar .dropmenu.active >div div:first-of-type{
+        transform: translateY(17px) rotate(45deg);
+        box-shadow: 0 0 4px #111;
+    }
+    #home .phonenavbar .dropmenu.scrolled.active >div div:first-of-type{
+        transform: translateY(12px) rotate(45deg);
+        box-shadow: 0 0 4px #111;
+    }
+    #home .phonenavbar .dropmenu >div div:nth-of-type(2){
+        top: calc(50% - 2px);
+    }
+    #home .phonenavbar .dropmenu.active >div div:nth-of-type(2){
+        left: -50px;
+        opacity: 0;
+    }
+    #home .phonenavbar .dropmenu >div div:last-of-type{
+        top: calc(100% - 10px);
+    }
+    #home .phonenavbar .dropmenu.active >div div:last-of-type{
+        transform: translateY(-17px) rotate(-45deg);
+        box-shadow: 0 0 4px #111; 
+    }
+    #home .phonenavbar .dropmenu.scrolled.active >div div:last-of-type{
+        transform: translateY(-12px) rotate(-45deg);
+    }
+    .phonemenu{
+        display: block;
+        position: fixed;
+        width: 50%;
+        height: 100%;
+        left: 100%;
+        top: 0;
+        background-color: rgba(256, 256, 256, 0.8);
+        z-index: 1000;
+        transition: all 0.5s linear;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 12px;
+    }
+    .phonemenu.active{
+        left: 50%;
+    }
+    .phonemenu >div{
+        width: 90%;
+        height: 40px;
+        text-align: center;
+        margin:0 0 25px;
+        line-height: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 2px #111;
+        background-color: #eee;
+        cursor: pointer;
+    }
+    .phonemenu >div a{
+        text-decoration: none;
+        color: #111;
+    }
+    .phonemenu >div.active{
+        background-image: linear-gradient(45deg, #7f3f9e, #319ed9);
+        box-shadow: 0 0 4px #111;
+    }
+    #home .content{
+        flex-direction: column;
+        padding: 0;
+        padding-top: 10px;
+    }
+    #home .content .left{
+        height: 30%;
+        width: 100%;
+        padding-top: 15px;
+    }
+    #home .content .left .header{
+        position: relative;
+    }
+    #home .content .left .header div{
+        position: absolute;
+    }
+    #home .content .left .header div:first-of-type{
+        z-index: 100;
+        font-size: 2em;
+    }
+    #home .content .left .header div:last-of-type{
+        top: 30px;
+        left: 10px;
+    }
+    #home .content .left .header div:last-of-type img{
+        width: 310px;
+        height: 190px;
+        opacity: 0.9;
+    }
+    #home .content .left .footer{
+        display: none;
+    }
+    #home .content .right{
+        height: 70%;
+        width: 100%;
+        overflow: hidden;
+    }
+    #home .content .right div:first-of-type{
+        padding: 0;
+        padding-top: 30px;
+    }
+    #home .content .right div:first-of-type img{
+        width: 99%;
+        height: 92%;
+    }
+   
+}
 
 
 

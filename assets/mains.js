@@ -1,4 +1,4 @@
-﻿
+
 document.body.style.height = window.innerHeight * 5;
 
 // change the color of scroll thumb to feet with the track color
@@ -69,7 +69,7 @@ document.querySelectorAll('#services .left >div').forEach(div => {
         customalert.classList.add('active');
         customalert.lastElementChild.lastElementChild.onclick = function(){
             document.querySelector('#home .navbar .sections .contact a').click();
-	    customalert.classList.remove('active');	
+            customalert.classList.remove('active');
         };
     };
 });
@@ -119,15 +119,17 @@ document.querySelector('#contact .left .form button').addEventListener(
                 formData.message = form[3].value;
                 console.log(formData)
                 fetch( 
-                    '/myportfolio/contact',
+                    window.location.pathname +'/'+ window.location.hash.split('#')[1],
                     {   
                         method: 'POST',
                         headers:{'Content-Type': 'application/json'},
                         body: JSON.stringify(formData)
                     }
                 ).then(res => {
+                    res.json().then(data => {
+                        console.log(data)
+                    }).catch(err => console.log(err));
                     if(res.status == 200){
-                        console.log(res.data)
                         if(!successAlert.classList.contains('active')){
                             successAlert.classList.add('active')
                         };
@@ -150,10 +152,58 @@ document.querySelector('#contact .left .form button').addEventListener(
                     errAlert.classList.add('active');
                 };
             };
-        };
-        
+        };  
     }
 );
+
+/**********************************media query max width 600 *******************/
+
+//show and hide the drop menu
+document.querySelector('#home .phonenavbar .dropmenu').onclick = function(e){
+    this.classList.toggle('active');
+    document.querySelector('.phonemenu').classList.toggle('active');
+};
+
+//show and hide the social info window
+document.querySelector('#contact .left .myinfo .logo').onclick = function(e){
+    this.parentElement.parentElement.classList.toggle('active');
+    document.querySelectorAll('#contact .myinfo .logo i').forEach(icon => {
+        icon.classList.toggle('active');
+    });
+};
+
+//scroll the dropmenu button
+window.onscroll = function(e){
+    let dropmenu = document.querySelector('#home .phonenavbar .dropmenu');
+    if(window.scrollY >= window.innerHeight){
+        if(!dropmenu.classList.contains('scrolled')){
+            dropmenu.classList.add('scrolled');
+        }
+    }else{
+        if(dropmenu.classList.contains('scrolled')){
+            dropmenu.classList.remove('scrolled');
+        }
+    }
+}
+
+document.querySelectorAll('.phonemenu div').forEach((div, index, array) => {
+    div.onclick = function(){
+        div.firstElementChild.click();
+        array.forEach(element => {
+            if(element.classList.contains('active')){
+                element.classList.remove('active')
+            };
+        });
+        if(!div.classList.contains('active')){
+            if(div.className == 'about'){
+                document.querySelectorAll('#about .right .after div div').forEach(div => {
+                    div.setAttribute('style', 'animation-play-state: running !important');
+                });
+            };
+            div.classList.add('active');
+        };
+    };
+});
 
 
 

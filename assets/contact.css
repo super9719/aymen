@@ -112,6 +112,12 @@
 #contact .left .myinfo .content .info div{
     margin-bottom: 20px;
 }
+#contact .left .myinfo .content .info div:hover >*{
+    color: #333;
+}
+#contact .left .myinfo .content .info div:not(:first-of-type):hover a{
+    color: #333;
+}
 #contact .left .myinfo .content .info div:first-of-type i{
     font-size: 1.5em;
 }
@@ -192,4 +198,77 @@
 }
 .err .middleE{
     padding-top: 10px;
+    
+}
+
+@media screen and (max-width: 600px) {
+    #contact .right{
+        display: none;
+    }
+    #contact div.left{
+        width: 100%;
+        height: 100%;
+        padding: 70px 15px;
+    }
+    #contact div.left .title{
+        width: 93%;
+        font-size: 2.2em;
+    }
+    #contact div.left .myinfo{
+        left: 100%;
+        height: 330px;
+        top: calc(50% - 145px);
+        transition: all 0.5s linear;
+    }
+    #contact div.left .myinfo.active{
+        left: calc(100% - 300px);
+    }
+    #contact div.left .form div{
+        width: 95%;
+        margin-bottom: 25px;
+    }
+    #contact div.left .form textarea{
+        width: 95%;
+        margin-bottom: 60px;
+    }
+    #contact div.left .form button{
+        width: 95%;
+    }
+    #contact div.left .myinfo .logo{
+        background-image: linear-gradient(45deg, #7f3f9e, #319ed9);
+        transition: all 0.5s linear;
+        cursor: pointer;
+    }
+    #contact div.left .myinfo.active .logo{
+        background-image: none;
+        background-color: #1e1e20;
+        padding-left: 5px;
+    }
+    #contact div.left .myinfo .logo i {
+        height: 50px;
+        line-height: 50px;
+        padding-left: 10px;
+        opacity: 0;
+        color: #fff;
+        transition: all 0.5s linear;
+        width: 0;
+    }
+    #contact div.left .myinfo .logo i:last-of-type{
+        padding-left: 0;
+        padding-right: 10px;
+    }
+    #contact div.left .myinfo .logo i.active{
+        opacity: 1;
+    }
+    #contact .success, #contact .err{
+        width: 90%;
+        left: 5%;
+    }
+    #contact .success .middleS, #contact .err .middleE{
+        width: calc(100% - 130px);
+    }
+    #contact .success .leftS, #contact .err .leftE,
+    #contact .success .rightS, #contact .err .rightE{
+        width: 65px;
+    }
 }

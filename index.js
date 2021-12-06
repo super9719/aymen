@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get('/myportfolio', (req, res) => {
-    res.sendFile(__dirname + '/main.html');
+    res.sendFile(__dirname + '/assets/main.html');
 });
 
 app.post('/myportfolio/contact', (req,res) => {

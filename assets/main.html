@@ -15,8 +15,27 @@
     <title>myPortFolio2</title>
 </head>
 <body>
+    <div class="phonemenu">
+        <div class="home active"><a href="#home">Home</a></div>
+        <div class="about"><a href="#about">About</a></div>
+        <div class="works"><a href="#works">Works</a></div>
+        <div class="services"><a href="#services">Services</a></div>
+        <div class="contact"><a href="#contact">Contact</a></div>     
+    </div>
     <div id="home">
         <div class="container">
+            <div class="phonenavbar">
+                <div class="title">
+                    Aymen
+                </div>
+                <div class="dropmenu">
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
             <div class="navbar">
                 <div class="title">
                     Aymen
@@ -234,6 +253,11 @@
                 </div>
             </div>
         </div>
+        <div class="customalert">
+            <div>Redirect to contact section</div>
+            <div>If you are willing to get any of our services contact us, We will do our best for you.</div>
+            <div><button onclick="classRemover(this.parentElement)">No</button><button>Yes</button></div>
+        </div>
     </div>
     
     <!------------------------------------contact ------------------------->
@@ -264,8 +288,9 @@
             </div>
             <div class="myinfo">
                 <div class="content">
-                    <div class="logo">
-    
+                    <div class="logo" title="Info">
+                        <i class="fas fa-chevron-left active"></i>
+                        <i class="fas fa-chevron-right"></i>
                     </div>
                     <div class="header">
                         Info
@@ -294,8 +319,37 @@
         <div class="right">
 
         </div>
+        <div class="err">
+            <div class="leftE">
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="middleE">
+                <div>Error</div>
+                <div>All fields must be filled out.</div>
+            </div>
+            <div class="rightE" onclick="classRemover(this)">
+                close
+            </div>
+        </div>
+        <div class="success">
+            <div class="leftS">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="middleS">
+                <div>Success</div>
+                <div>Your message has been sent, we will hit you up as soon as we can.</div>
+            </div>
+            <div class="rightS" onclick="classRemover(this)">
+                close
+            </div>
+        </div>
     </div>
 
     <script src="./mains.js"></script>
+    <script type="text/javascript">
+        function classRemover(caller){
+            caller.parentElement.classList.remove('active');
+        };
+    </script>
 </body>
 </html>

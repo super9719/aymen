@@ -271,8 +271,6 @@
     font-size: 4.8em;
     color: #fff;
 }
-#about .content .right .after div div{
-}
 
 
 /********************************* animation *****************************/
@@ -467,4 +465,372 @@
         top: 70px;
         left: 189px;
     }
+}
+
+
+/******************************** media screen max-width 600px ***********************/
+
+/*animation for phone sizes*/
+@keyframes html2 {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    100%{
+        top: -30px;
+        left: -18px;
+    }
+}
+@keyframes css2 {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    50%{
+        top: -30px;
+        left: -18px;
+    }
+    100%{
+        top: 15px;
+        left: -51px;
+    }
+}
+@keyframes js2 {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    35%{
+        top: -30px;
+        left: -18px;
+    }
+    70%{
+        top: 15px;
+        left: -51px;
+    }
+    100%{
+        top: 71px;
+        left: -54px;
+    }
+}
+@keyframes express2 {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    25%{
+        top: -30px;
+        left: -18px;
+    }
+    50%{
+        top: 15px;
+        left: -51px;
+    }
+    75%{
+        top: 71px;
+        left: -54px;
+    }
+    100%{
+        top: 122px;
+        left: -30px;
+    }
+}
+@keyframes react2 {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    20%{
+        top: -30px;
+        left: -18px;
+    }
+    40%{
+        top: 15px;
+        left: -51px;
+    }
+    60%{
+        top: 71px;
+        left: -54px;
+    }
+    80%{
+        top: 122px;
+        left: -30px;
+    }
+    100%{
+        top: 151px;
+        left: 20px;
+    }
+}
+@keyframes electron2 {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    17%{
+        top: -30px;
+        left: -18px;
+    }
+    34%{
+        top: 15px;
+        left: -51px;
+    }
+    51%{
+        top: 71px;
+        left: -54px;
+    }
+    68%{
+        top: 122px;
+        left: -30px;       
+    }
+    85%{
+        top: 151px;
+        left: 20px;        
+    }
+    100%{
+        top: 152px;
+        left: 76px;         
+    }
+}
+@keyframes mysql2 {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    14%{
+        top: -30px;
+        left: -18px;
+    }
+    28%{
+        top: 15px;
+        left: -51px;        
+    }
+    42%{
+        top: 71px;
+        left: -54px;
+    }
+    56%{
+        top: 122px;
+        left: -30px;
+    }
+    70%{
+        top: 151px;
+        left: 20px;
+    }
+    84%{
+        top: 152px;
+        left: 76px;
+    }
+    100%{
+        top: 123px;
+        left: 127px;
+    }
+}
+@keyframes mongodb2 {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    12%{
+        top: -30px;
+        left: -18px;
+    }
+    24%{
+        top: 15px;
+        left: -51px;        
+    }
+    36%{
+        top: 71px;
+        left: -54px;
+    }
+    48%{
+        top: 122px;
+        left: -30px;
+    }
+    60%{
+        top: 151px;
+        left: 20px;
+    }
+    72%{
+        top: 152px;
+        left: 76px;
+    }
+    84%{
+        top: 123px;
+        left: 127px;
+    }
+    100%{
+        top: 75px;
+        left: 155px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #about .container{
+        padding: 0 10px;
+    }
+    #about .content{
+        flex-direction: column;
+    }
+    #about .content .left{
+        width: 100%;
+        height: 50%;
+        padding-top: 90px;
+    }
+    #about .content .left .ref{
+        width: 160px;
+        height: 160px;
+    }
+    #about .content .left .ref .circle{
+        width: 75px;
+        height: 75px;
+        top: calc(100% - 70px);
+    }
+    #about .content .left .ref .circle i{
+        height: 75px;
+        line-height: 75px;
+        font-size: 2.2em;
+    }
+    #about .content .left .ref .title{
+        top: -50px;
+        font-size: 2.3em;
+    }
+    #about .content .left .ref .description{
+        top: 12px;
+        width: 270px;
+
+    }
+    #about .content .left .principles{
+        display: none;
+    }
+    #about .content .right{
+        height: 50%;
+        width: 100%;
+        margin-top: -60px;
+        padding-top: 0;
+    }
+    #about .content .right .before{
+        width: 200px;
+        height: 200px;
+        left: calc(100% - 200px);
+    }
+    #about .content .right .img{
+        width: 360px;
+        height: 280px;
+        left: calc(100% - 255px);
+        top: -5px;
+    }
+    #about .content .right .after{
+        width: 150px;
+        height: 150px;
+        top: 150px;
+        left: calc(100% - 235px);
+    }
+    #about .content .right .after >div{
+        line-height: 150px;
+    }
+    #about .content .right .after >div div{
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    #about .content .right .after div div.active:first-of-type{
+        top: -30px;
+        left: -18px;
+    }
+    #about .content .right .after div div:first-of-type{
+        animation: html2 .3s linear .5s 1;
+    }
+    #about .content .right .after div div:first-of-type img{
+        width: 80%;
+        height: 80%;
+        margin: 10% auto;
+    
+    }
+    #about .content .right .after div div.active:nth-of-type(2){
+        top: 15px;
+        left: -51px;
+    }
+    #about .content .right .after div div:nth-of-type(2){
+        animation: css2 .6s linear .5s 1;
+    }
+    #about .content .right .after div div:nth-of-type(2) img{
+        width: 80%;
+        height: 80%;
+        margin: 10% auto;
+    }
+    #about .content .right .after div div.active:nth-of-type(3){
+        top: 71px;
+        left: -54px;
+    }
+    #about .content .right .after div div:nth-of-type(3){
+        animation: js2 0.9s linear .5s 1; 
+    }
+    #about .content .right .after div div:nth-of-type(3) img{
+        width: 60%;
+        height: 60%;
+        margin: 20% auto;
+    }
+    #about .content .right .after div div.active:nth-of-type(4){
+        top: 122px;
+        left: -30px;
+    }
+    #about .content .right .after div div:nth-of-type(4){
+        animation: express2 1.2s linear .5s 1;
+    }
+    #about .content .right .after div div:nth-of-type(4) img{
+        width: 80%;
+        height: 80%;
+        margin: 10% auto;
+    }
+    #about .content .right .after div div.active:nth-of-type(5){
+        top: 151px;
+        left: 20px;
+    }
+    #about .content .right .after div div:nth-of-type(5){
+        animation: react2 1.5s linear .5s 1;
+    }
+    #about .content .right .after div div:nth-of-type(5) img{
+        width: 80%;
+        height: 80%;
+        margin: 10% auto;
+    }
+    #about .content .right .after div div.active:nth-of-type(6){
+        top: 152px;
+        left: 76px;
+    }
+    #about .content .right .after div div:nth-of-type(6){
+        animation: electron2 1.8s linear .5s 1;
+    }
+    #about .content .right .after div div:nth-of-type(6) i{
+        height: 50px;
+        line-height: 50px;
+        font-size: 4em;
+        color: #fff;
+    }
+    #about .content .right .after div div.active:nth-of-type(7){
+        top: 123px;
+        left: 127px;
+    }
+    #about .content .right .after div div:nth-of-type(7){
+        animation: mysql2 2.1s linear .5s 1;
+    }
+    #about .content .right .after div div:nth-of-type(7) i{
+        height: 50px;
+        line-height: 50px;
+        font-size: 4.5em;
+        color: #fff;
+    }
+    #about .content .right .after div div.active:last-of-type{
+        top: 75px;
+        left: 155px;
+    }
+    #about .content .right .after div div:last-of-type{
+        animation: mongodb2 2.4s linear .5s 1;
+    }
+    #about .content .right .after div div:last-of-type i{
+        height: 50px;
+        line-height: 45px;
+        font-size: 3.9em;
+        color: #fff;
+    }
+    
 }
