@@ -105,6 +105,9 @@
     top: -25px;
     left: -25px;
 }
+#contact .left .myinfo .content .logo i{
+    display: none;
+}
 #contact .left .myinfo .content .header{
     font-size: 1.8em;
     height: 60px;
@@ -250,6 +253,7 @@
         padding-left: 5px;
     }
     #contact div.left .myinfo .logo i {
+	display: inline-block;
         height: 50px;
         line-height: 50px;
         padding-left: 10px;
